@@ -16,13 +16,13 @@ tasks {
     processResources { filteringCharset = Charsets.UTF_8.name() }
 
     runServer {
-        minecraftVersion("1.20.6")
+        minecraftVersion("1.21.5")
         jvmArgs("-Dcom.mojang.eula.agree=true")
     }
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.6-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.21.5-R0.1-SNAPSHOT")
 }
 
 paper {
@@ -30,7 +30,7 @@ paper {
     bootstrapper = "me.sytex.plugin.Bootstrap"
     loader = "me.sytex.plugin.Loader"
 
-    apiVersion = "1.20"
+    apiVersion = "1.21"
 
     foliaSupported = true
 
