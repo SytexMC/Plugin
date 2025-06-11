@@ -1,5 +1,3 @@
-import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
-
 plugins {
     `java-library`
     id("xyz.jpenilla.run-paper") version "2.3.1"
