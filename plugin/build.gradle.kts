@@ -27,8 +27,8 @@ dependencies {
 
 paper {
     main = "me.sytex.plugin.Plugin"
-    bootstrapper = "me.sytex.plugin.Bootstrap"
-    loader = "me.sytex.plugin.Loader"
+    bootstrapper = "me.sytex.plugin.PluginBootstrap"
+    loader = "me.sytex.plugin.PluginLoader"
 
     apiVersion = "1.21"
 
