@@ -4,6 +4,10 @@ allprojects {
 
     ext { set("javaToolchainVersion", 21) }
 
+    tasks.withType<Jar> {
+        archiveBaseName.set(rootProject.name)
+    }
+
     repositories {
         mavenLocal()
         mavenCentral()
