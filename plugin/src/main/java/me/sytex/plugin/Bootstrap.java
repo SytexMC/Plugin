@@ -21,12 +21,13 @@
 package me.sytex.plugin;
 
 import io.papermc.paper.plugin.bootstrap.BootstrapContext;
+import io.papermc.paper.plugin.bootstrap.PluginBootstrap;
 import io.papermc.paper.plugin.bootstrap.PluginProviderContext;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("UnstableApiUsage")
-public class PluginBootstrap implements io.papermc.paper.plugin.bootstrap.PluginBootstrap {
+public class Bootstrap implements PluginBootstrap {
 
   /**
    * Called by the server, allowing you to bootstrap the plugin with a context that provides things like a logger and your shared plugin configuration

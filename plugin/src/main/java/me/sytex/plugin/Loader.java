@@ -21,10 +21,11 @@
 package me.sytex.plugin;
 
 import io.papermc.paper.plugin.loader.PluginClasspathBuilder;
+import io.papermc.paper.plugin.loader.PluginLoader;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("UnstableApiUsage")
-public class PluginLoader implements io.papermc.paper.plugin.loader.PluginLoader {
+public class Loader implements PluginLoader {
 
   /**
    * Called by the server to allow plugin to configure the runtime classpath that the plugin is run on. This allows plugin loaders to configure
