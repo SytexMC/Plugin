@@ -29,24 +29,11 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings("UnstableApiUsage")
 public class Bootstrap implements PluginBootstrap {
 
-  /**
-   * Called by the server, allowing you to bootstrap the plugin with a context that provides things like a logger and your shared plugin configuration
-   * file.
-   *
-   * @param context the server provided context
-   */
   @Override
   public void bootstrap(@NotNull BootstrapContext context) {
 
   }
 
-  /**
-   * Called by the server to instantiate your main class. Plugins may override this logic to define custom creation logic for said instance, like
-   * passing addition constructor arguments.
-   *
-   * @param context the server created bootstrap object
-   * @return the server requested instance of the plugin main class.
-   */
   @Override
   public @NotNull JavaPlugin createPlugin(@NotNull PluginProviderContext context) {
     return io.papermc.paper.plugin.bootstrap.PluginBootstrap.super.createPlugin(context);

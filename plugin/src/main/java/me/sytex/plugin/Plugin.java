@@ -24,25 +24,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Plugin extends JavaPlugin {
 
-  /**
-   * Called when the plugin is first loaded before server startup.
-   */
   @Override
   public void onLoad() {
 
   }
 
-  /**
-   * Called when the plugin is enabled during server startup.
-   */
   @Override
   public void onEnable() {
 
   }
 
-  /**
-   * Called when the plugin is disabled during server shutdown.
-   */
   @Override
   public void onDisable() {
 

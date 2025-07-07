@@ -27,13 +27,6 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings("UnstableApiUsage")
 public class Loader implements PluginLoader {
 
-  /**
-   * Called by the server to allow plugin to configure the runtime classpath that the plugin is run on. This allows plugin loaders to configure
-   * dependencies for the plugin where jars can be downloaded or provided during runtime.
-   *
-   * @param classpathBuilder a mutable classpath builder that may be used to register custom runtime dependencies for the plugin the loader was
-   *                         registered for.
-   */
   @Override
   public void classloader(@NotNull PluginClasspathBuilder classpathBuilder) {
 
