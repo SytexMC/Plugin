@@ -1,7 +1,7 @@
 plugins {
     `java-library`
-    id("xyz.jpenilla.run-paper") version "2.3.1"
-    id("de.eldoria.plugin-yml.paper") version "0.7.1"
+    alias(libs.plugins.run.paper)
+    alias(libs.plugins.pluginyml)
 }
 
 java { toolchain.languageVersion.set(JavaLanguageVersion.of(project.ext.get("javaToolchainVersion") as Int)) }
@@ -22,7 +22,7 @@ tasks {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.7-R0.1-SNAPSHOT")
+    compileOnly(libs.paper.api)
 }
 
 paper {

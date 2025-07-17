@@ -1,0 +1,6 @@
+[libraries]
+paper-api = { module = "io.papermc.paper:paper-api", version = "1.21.7-R0.1-SNAPSHOT" }
+
+[plugins]
+run-paper = { id = "xyz.jpenilla.run-paper", version = "2.3.1" }
+pluginyml = { id = "de.eldoria.plugin-yml.paper", version = "0.7.1" }
