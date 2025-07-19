@@ -1,5 +1,6 @@
 allprojects {
     apply {
+        plugin("java-library")
         plugin("checkstyle")
     }
 

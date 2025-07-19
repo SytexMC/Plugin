@@ -1,5 +1,4 @@
 plugins {
-    `java-library`
     alias(libs.plugins.run.paper)
     alias(libs.plugins.pluginyml)
 }
