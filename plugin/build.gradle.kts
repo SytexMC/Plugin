@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.run.paper)
-    alias(libs.plugins.pluginyml)
+    alias(libs.plugins.yml.paper)
 }
 
 java { toolchain.languageVersion.set(JavaLanguageVersion.of(project.ext.get("javaToolchainVersion") as Int)) }
