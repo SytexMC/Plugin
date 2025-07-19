@@ -25,4 +25,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 @SuppressWarnings("checkstyle:MissingJavadocType")
 public class Plugin extends JavaPlugin {
 
+  @Override
+  public void onEnable() {
+    // TODO: Add implementation here
+  }
 }
