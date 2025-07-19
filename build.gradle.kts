@@ -12,7 +12,7 @@ allprojects {
         archiveBaseName.set(rootProject.name)
     }
 
-    configure<org.gradle.api.plugins.quality.CheckstyleExtension> {
+    configure<CheckstyleExtension> {
         toolVersion = "10.26.1"
         configDirectory.set(rootProject.file("config/checkstyle"))
         configFile = rootProject.file("config/checkstyle/checkstyle.xml")
