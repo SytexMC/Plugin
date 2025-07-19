@@ -6,19 +6,23 @@ plugins {
 java { toolchain.languageVersion.set(JavaLanguageVersion.of(project.ext.get("javaToolchainVersion") as Int)) }
 
 tasks {
+    runServer {
+        minecraftVersion("1.21.7")
+        jvmArgs("-Dcom.mojang.eula.agree=true") // Automatically agree to the Minecraft EULA
+    }
+
     compileJava {
-        options.encoding = Charsets.UTF_8.name()
+        options.encoding = Charsets.UTF_8.name() // We want UTF-8 for everything
         options.release.set(project.ext.get("javaToolchainVersion") as Int)
     }
 
-    javadoc { options.encoding = Charsets.UTF_8.name() }
-    processResources { filteringCharset = Charsets.UTF_8.name() }
+    processResources {
+        filteringCharset = Charsets.UTF_8.name() // We want UTF-8 for everything
+    }
 
-    withType<Jar> { archiveBaseName.set(rootProject.name) }
-
-    runServer {
-        minecraftVersion("1.21.7")
-        jvmArgs("-Dcom.mojang.eula.agree=true")
+    withType<Jar> {
+        archiveBaseName.set(rootProject.name) // Set JAR filename to match the project name
+        from(rootProject.file("LICENSE")) // Include the LICENSE file in the built jar
     }
 }
 
