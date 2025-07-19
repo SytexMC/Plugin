@@ -1,4 +1,8 @@
 allprojects {
+    apply {
+        plugin("checkstyle")
+    }
+
     group = "me.sytex"
     version = "0.0.1-SNAPSHOT"
 
@@ -6,6 +10,14 @@ allprojects {
 
     tasks.withType<Jar> {
         archiveBaseName.set(rootProject.name)
+    }
+
+    configure<org.gradle.api.plugins.quality.CheckstyleExtension> {
+        toolVersion = "10.26.1"
+        configDirectory.set(rootProject.file("config/checkstyle"))
+        configFile = rootProject.file("config/checkstyle/checkstyle.xml")
+        maxWarnings = 0
+        maxErrors = 0
     }
 
     repositories {
