@@ -9,10 +9,6 @@ allprojects {
 
     ext { set("javaToolchainVersion", 21) }
 
-    tasks.withType<Jar> {
-        archiveBaseName.set(rootProject.name)
-    }
-
     configure<CheckstyleExtension> {
         toolVersion = "10.26.1"
         configDirectory.set(rootProject.file("config/checkstyle"))

@@ -14,6 +14,8 @@ tasks {
     javadoc { options.encoding = Charsets.UTF_8.name() }
     processResources { filteringCharset = Charsets.UTF_8.name() }
 
+    withType<Jar> { archiveBaseName.set(rootProject.name) }
+
     runServer {
         minecraftVersion("1.21.7")
         jvmArgs("-Dcom.mojang.eula.agree=true")
