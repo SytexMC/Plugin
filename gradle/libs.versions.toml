@@ -2,5 +2,5 @@
 paper-api = { module = "io.papermc.paper:paper-api", version = "1.21.8-R0.1-SNAPSHOT" }
 
 [plugins]
-run-paper = { id = "xyz.jpenilla.run-paper", version = "2.3.1" }
+run-paper = { id = "xyz.jpenilla.run-paper", version = "3.0.0" }
 yml-paper = { id = "de.eldoria.plugin-yml.paper", version = "0.8.0" }
