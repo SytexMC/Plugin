@@ -22,7 +22,7 @@ package me.sytex.plugin;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-@SuppressWarnings("checkstyle:MissingJavadocType")
+// CHECKSTYLE:OFF: Javadoc
 public class Plugin extends JavaPlugin {
 
   @Override
