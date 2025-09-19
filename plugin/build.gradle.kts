@@ -1,14 +1,15 @@
 plugins {
-    alias(libs.plugins.run.paper)
-    alias(libs.plugins.yml.paper)
+    alias(libs.plugins.run.velocity)
 }
 
 java { toolchain.languageVersion.set(JavaLanguageVersion.of(project.ext.get("javaToolchainVersion") as Int)) }
 
 tasks {
-    runServer {
-        minecraftVersion("1.21.7")
-        jvmArgs("-Dcom.mojang.eula.agree=true") // Automatically agree to the Minecraft EULA
+    runVelocity {
+        // Configure the Velocity version for our task.
+        // This is the only required configuration besides applying the plugin.
+        // Your plugin's jar (or shadowJar if present) will be used automatically.
+        velocityVersion("3.4.0-SNAPSHOT")
     }
 
     compileJava {
@@ -31,20 +32,6 @@ repositories {
 }
 
 dependencies {
-    compileOnly(libs.paper.api)
-}
-
-paper {
-    main = "me.sytex.plugin.Plugin"
-
-    apiVersion = "1.21"
-
-    foliaSupported = true
-
-    name = "Plugin"
-    description = "A Paper Plugin Template"
-    version = project.version as String
-
-    authors = listOf("Sytex")
-    contributors = listOf()
+    compileOnly(libs.velocity.api)
+    annotationProcessor(libs.velocity.api)
 }
