@@ -1,4 +1,4 @@
-package me.sytex.velocityPlugin;
+package me.sytex.velocityplugin;
 
 // The constants are replaced before compilation
 public class BuildConstants {
