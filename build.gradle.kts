@@ -16,9 +16,4 @@ allprojects {
         maxWarnings = 0
         maxErrors = 0
     }
-
-    repositories {
-        mavenLocal()
-        mavenCentral()
-    }
 }
