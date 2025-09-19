@@ -29,18 +29,20 @@ import com.velocitypowered.api.proxy.ProxyServer;
 import java.nio.file.Path;
 import org.slf4j.Logger;
 
-@SuppressWarnings("checkstyle:MissingJavadocType")
-@Plugin(id = "velocityplugin", name = "VelocityPlugin", version = "0.0.1-SNAPSHOT",
-    description = "A Velocity Plugin Template", authors = {"Sytex"})
+// CHECKSTYLE:OFF: Javadoc
+@Plugin(
+  id = "velocityplugin",
+  name = "VelocityPlugin",
+  version = "0.0.1-SNAPSHOT",
+  description = "A Velocity Plugin Template",
+  authors = {"Sytex"}
+)
 public class VelocityPlugin {
 
   private final ProxyServer proxy;
   private final Logger logger;
   private final Path data;
 
-  /**
-   * Constructs the main class of the Velocity plugin.
-   */
   @Inject
   public VelocityPlugin(ProxyServer proxy, Logger logger, @DataDirectory Path data) {
     this.proxy = proxy;
@@ -48,11 +50,6 @@ public class VelocityPlugin {
     this.data = data;
   }
 
-  /**
-   * This event is fired by the proxy after plugins have been loaded but before the proxy starts
-   * accepting connections. Velocity will wait for this event to finish firing before it begins
-   * to accept new connections.
-   */
   @Subscribe
   public void onProxyInitialization(ProxyInitializeEvent event) {
     // TODO: Add implementation here
